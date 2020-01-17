@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Menampilkan Posisi User Secara Realtime Dengan Leafletjs</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/leaflet.css" />
+    <script src="assets/js/leaflet.js"></script>
+    <script src="assets/js/leaflet.providers.js"></script>
+    <script src="assets/js/leaflet.bing.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
+    <style>
+      table, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Menampilkan Posisi User Secara Realtime Dengan Leafletjs</h1>
+    <div id="peta" style="width: 100%; height: 300px;"></div>
+    <p>*<u>Posisi marker akan diupdate secara realtime sesuai posisi user sekarang</u></p>
+    <form>
+      <table>
+          <tbody>
+              <tr>
+                  <td><strong>STATUS LOKASI</strong></td>
+                  <td id="status_lokasi">
+                    <i class="fa fa-loading"></i>
+                  </td>
+              </tr>
+              <tr>
+                  <td><strong>LATITUDE</strong></td>
+                  <td>
+                    <input type="text" name="latitude" />
+                  </td>
+              </tr>
+              <tr>
+                  <td><strong>LONGITUDE</strong></td>
+                  <td>
+                    <input type="text" name="longitude" />
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <!-- KODE MAPS -->
+      <script src="assets/js/peta.js"></script>
+      <script>
+        initMap();
+      </script>
+  </body>
+</html>
